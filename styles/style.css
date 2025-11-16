@@ -4,13 +4,355 @@
 ✦ like-icon — для svg-иконки анимированного сердца
 ✦ card__like-button — для кнопки Like рядом с иконкой
 ✦ card__icon-button — для кнопки, оборачивающей иконку
-✦ card__icon-button — для кнопки, оборачивающей иконку
 ✦ is-liked — для обозначения состояния лайкнутой иконки в виде сердца
 ✦ button__text — для обозначения текстового элемента внутри кнопки
-
 */
 
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  font-family: var(--main-font), 'sans-serif';
+  font-variation-settings: 'wght' var(--main-card-font-weight, 400);
+  background-image: var(--body-pattern);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+.card__title {
+  margin-left: 4px;
+}
+
+.header__logo {
+  font-size: 65px;
+}
+
+.header__title {
+  font-size: 23px;
+  text-transform: uppercase;
+}
+
+.page__section {
+  background-color: white;
+  width: 700px;
+  border: 3px solid black;
+  display: flex;
+  flex-direction: column;
+  height: 959px;
+}
+
+.card {
+  background-color: white;
+  width: 700px;
+  border: 3px solid black;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 49.6px;
+}
+
+.card__image-contanier {
+  position: relative;
+}
+
+.card__image {
+  max-block-size: 700px;
+  max-inline-size: 696px;
+}
+
+.card__label {
+  position: absolute;
+  right: 25px;
+  top: 25px;
+  font-size: 14px;
+  font-family: 'PressStart2P';
+  font-variation-settings: 'wght' var(--main-card-font-weight, 400);
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.4);
+}
+
+.card__description {
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+  font-size: 18px;
+  gap: 23px;
+}
+
+.card__controls {
+  display: flex;
+  flex-direction: row;
+  gap: 1px;
+  justify-content: end;
+  align-items: end;
+  line-height: 90%;
+  font-size: 14px;
+  margin-right: 23px;
+  margin-bottom: 25px;
+}
+
+.card__controls button {
+  width: 130px;
+  height: 38px;
+}
+
+dialog::backdrop {
+  background-color: rgb(0 0 0 / 0.3);
+  backdrop-filter: blur(7px);
+} 
+
+.button__save {
+  background-color: white;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 9px;
+  font-size: 14px;
+  width: 336px;
+  height: 56px;
+  font-family: 'PressStart2P';
+  white-space: nowrap;
+  font-variation-settings: 'wght' var(--main-card-font-weight, 400);
+  padding-bottom: 5px;
+  padding-left: 6px;
+}
+
+.header {
+  background-color: white;
+  width: 696px;
+  height: 364px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 300px 100px 300px;
+  gap: 20px;
+  border: 3px solid black;
+  margin-top: 100px;
+  font-family: 'PressStart2P';
+  margin-bottom: 50px;
+}
+
+.dialog__item {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  font-size: 14px;
+  justify-content: center;
+  align-items: center;
+  margin: 7px;
+  line-height: 150%;
+  text-transform: uppercase;
+}
+
+.dialog {
+  width: 400px;
+  height: 200px;
+  font-family: 'PressStart2P';
+  font-size: 14px;
+  padding: 30px;
+}
+
+.card__title {
+  font-size: 18px;
+  font-variation-settings: 'wght' 700;
+  padding: 5px;
+}
+
+.card__like-button {
+  position: relative;
+  overflow: hidden;
+  background: transparent;
+  color: black;                
+  border: 3px solid black;
+  transition: color 0.3s ease;
+}
+
+.card__like-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;             
+  height: 100%;
+  background: black;
+  transition: width 0.5s ease;
+  z-index: 0;
+}
+
+
+.card__like-button:hover::before {
+  width: 100%;
+}
+
+
+.card__like-button:hover {
+  color: white;  
+  cursor: pointer;
+}
+
+
+.card__like-button * {
+  position: relative;
+  z-index: 1;
+}
+
+.card__icon-button {
+  border: none;         
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  cursor: pointer;
+}
+
+.card__icon-button img {
+  padding-top: 10px;
+  width: 30px;
+  height: 30px;
+}
+
+.button__text {
+  font-family: 'PressStart2P';
+}
+
+.disceta {
+  width: 39px;
+  height: 39px;
+}
+
+.popup__close-button {
+  width: 293px;
+  height: 38px;
+  border: 3px solid black;
+  cursor: pointer;
+}
+
+dialog[open] {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.like-icon {
+  display: inline-block;
+  cursor: pointer;
+  transition: transform 0.3s ease; 
+}
+
+.like-icon:hover {
+  transform: scale(1.2);
+}
+
+.like-icon .contur {
+  fill: black;
+  transition: fill 0.3s ease;
+}
+
+.like-icon .main-body {
+  fill: transparent;
+  transition: fill 0.3s ease;
+}
+
+.like-icon .core {
+  fill: transparent;
+  transition: fill 0.3s ease;
+}
+
+.like-icon .sparks {
+  fill: transparent;
+}
+
+.like-icon:hover .main-body {
+  fill: black;
+  transition: fill 1s ease;
+}
+
+
+.like-icon:hover .core {
+  fill: black;
+  transition: fill 0.2s ease;
+}
+
+.like-icon.is-liked .contur,
+.like-icon.is-liked .main-body,
+.like-icon.is-liked .core {
+  fill: red;
+}
+
+.like-icon:active .main-body,
+.like-icon:active .core {
+  fill: red;
+}
+
+.is-liked .sparks {
+  animation: sparks 1.2s ease forwards;
+}
+
+.like-icon.is-liked {
+  animation: bounce 0.6s ease;
+} 
+
+.card__controls:has(.is-liked) .card__like-button {
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 1);
+  transition: box-shadow 0.5s ease;
+}
+
+@media (max-width: 376px) {
+  .card {
+    max-width: 371px;
+  }
+
+  .card__image {
+    max-width: 370px;
+  }
+
+  .header {
+    width: 371px;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 50px;
+    gap: 16px;
+    height: 323px;
+  }
+
+  .header__logo {
+    font-size: 49px;
+  }
+
+  .header__title {
+    font-size: 14px;
+  }
+
+  .main {
+    max-width: 375px;
+  }
+
+  .card__controls {
+    margin-right: 22px;
+    margin-bottom: 20px;
+  }
+
+
+  .card__label {
+    right: 8px;
+    top: 24px;
+  }
+
+  .card__description {
+    margin: 25px 25px 33px 25px;
+    width: 321px;
+    height: 216px;
+    padding: 0;
+  }
 }
