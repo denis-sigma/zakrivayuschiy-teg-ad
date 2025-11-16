@@ -175,7 +175,7 @@ dialog::backdrop {
   position: relative;
   overflow: hidden;
   background: transparent;
-  color: black;           
+  color: black;
   border: 3px solid black;
   transition: color 0.3s ease;
 }
@@ -185,7 +185,7 @@ dialog::backdrop {
   position: absolute;
   top: 0;
   left: 0;
-  width: 0;      
+  width: 0;
   height: 100%;
   background: black;
   transition: width 0.5s ease;
@@ -209,7 +209,7 @@ dialog::backdrop {
 }
 
 .card__icon-button {
-  border: none;    
+  border: none;
   display: flex;
   justify-content: end;
   align-items: center;
