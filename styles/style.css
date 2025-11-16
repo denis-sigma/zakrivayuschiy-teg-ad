@@ -73,6 +73,8 @@ main {
   font-family: 'PressStart2P';
   font-variation-settings: 'wght' var(--main-card-font-weight, 400);
   -webkit-text-stroke: 1px rgba(255, 255, 255, 0.4);
+  z-index: 1;
+  
 }
 
   @supports (-webkit-text-stroke: 1px black) or (text-stroke: 1px black) {
@@ -83,7 +85,7 @@ main {
 .card__description {
   display: flex;
   flex-direction: column;
-  padding: 25px;
+  padding: 24.65px;
   font-size: 18px;
   gap: 23px;
 }
@@ -274,6 +276,10 @@ dialog[open] {
   fill: transparent;
 }
 
+.button__save-image {
+  content: url(../svg/save.svg);
+}
+
 .like-icon:hover .main-body {
   fill: black;
   transition: fill 1s ease;
@@ -311,11 +317,17 @@ dialog[open] {
 
 @media (max-width: 376px) {
   .card {
-    max-width: 371px;
+    width: 375px;
+    height: auto;
   }
 
   .card__image {
-    max-width: 370px;
+    width: 371px;
+    height: 371px;
+  }
+
+  .card-1 {
+    margin-top: 3px;
   }
 
   .header {
@@ -323,7 +335,7 @@ dialog[open] {
     padding: 0;
     margin: 0;
     margin-bottom: 50px;
-    gap: 16px;
+    gap: 20px;
     height: 323px;
   }
 
@@ -335,13 +347,13 @@ dialog[open] {
     font-size: 14px;
   }
 
-  .main {
-    max-width: 375px;
+  .page {
+    gap: 48px;
   }
 
   .card__controls {
     margin-right: 22px;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
   }
 
   .card__label {
@@ -349,12 +361,54 @@ dialog[open] {
     top: 24px;
   }
 
+  .card__description-7 {
+    padding: 23px 28px 25px 25px;
+  }
+
+  .card__description-1 {
+    padding: 22px 25px 25px 25px;
+  }
+
+  .card__description-2 {
+    padding: 22px 25px 25px 25px;
+  }
+
+  .card__description-3 {
+    padding-top: 22px;
+  }
+
+  .card__description-4 {
+    padding-top: 21px;
+  }
+
+  .card__description-5 {
+    padding-top: 22px;
+  }
+
+  .card__description-6 {
+    padding-top: 20px;
+  }
+
+  .card__description-8 {
+    padding-top: 20px;
+  }
+
+  .card__controls-1 {
+    margin-bottom: 25px;
+  }
+
   .button__save {
     flex-direction: column;
     gap: 8px;
     width: 306px;
     height: 80px;
-    margin-top: 19px;
+    margin-top: 7px;
+  }
+
+  
+
+  .button__save-image {
+    content: url(../images/floppy.png);
   }
 }
 
