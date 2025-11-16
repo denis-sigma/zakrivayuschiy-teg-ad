@@ -276,10 +276,6 @@ dialog[open] {
   fill: transparent;
 }
 
-.button__save-image {
-  content: url(../svg/save.svg);
-}
-
 .like-icon:hover .main-body {
   fill: black;
   transition: fill 1s ease;
@@ -404,8 +400,6 @@ dialog[open] {
     height: 80px;
     margin-top: 7px;
   }
-
-  
 
   .button__save-image {
     content: url(../images/floppy.png);
